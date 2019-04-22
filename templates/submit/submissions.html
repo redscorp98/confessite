@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Submissions
+	</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			background-color: grey;
+		}
+		#main-body {
+			margin: auto;
+			width: 90%;
+		}
+		.column {
+			float: left;
+			width: 25%;
+			padding: 1px;
+		}
+		.row {
+			padding: 0px;
+			border-style: dashed;
+			border-color: black;
+			border-width: 2px;
+		}
+		#submission-details {
+			padding: 0px;
+		}
+		textarea{
+			height: 150px;
+			width: 100%;
+			background-color: white;
+			border: none;
+            text-align: left;
+		}
+		input[type=submit] {
+			width: 25%;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="main-body">
+		<p>
+			Look out for names and such
+		</p>
+        {% for post in posts %}}
+		<div class="row" id="submission">
+			<div id="submission-details">
+				<div class="column" id = "date">
+					<p>
+						{{ post.Date }}
+					</p>
+				</div>
+				<div class="column" id = "time">
+					<p>
+						{{ post.Time }}
+					</p>
+				</div>
+				<div class="column" id = "item3">
+					<p>
+						{{ post.id }}
+					</p>
+				</div>
+				<div class="column" id = "item4">
+					<p>
+						item 4
+					</p>
+				</div>
+			</div>
+			<textarea>
+				{{ post.Content }}
+			</textarea>
+
+            <input type="submit" value="Approve" onclick="window.location.reload();">
+			<input name = {{ post.id }} type="submit" value="Delete">
+
+		</div>
+        {% endfor %}
+	</div>
+</body>
+</html>

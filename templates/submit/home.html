@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+        Submit
+	</title>
+	<style>
+		img {
+			margin-left: auto;
+			margin-right: auto;
+			width: 40%;
+			display: block;
+		}
+		img:hover{
+			-webkit-animation: pulse
+			.3s linear;
+		}
+		@-webkit-keyframes pulse{
+			0% {
+				-webkit-transform:
+					scale(1);
+			}
+			50% {
+				-webkit-transform:
+					scale(1.3);
+			}
+			100% {
+				-webkit-transform:
+					scale(1);
+			}
+		}
+		body {
+
+			background-color: grey;
+		}
+		#main-body {
+			width: 70%;
+			margin: auto;
+		}
+		#submit-form {
+			padding: 20px 20px;
+		}
+		#logo-text {
+			text-align: center;
+			font-weight: bold;
+		}
+		input[type=text], textarea {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+			padding: 10px;
+			height: 40px;
+			-webkit-transition: height 1s ease-in-out; /*transiton activates when value of height changes*/
+			transition: height 1s ease-in-out;
+			width: 80%;
+			border: 2px solid red;
+			border-radius: 4px;
+			display: block;
+			{#background-image: ;/*needs figuing out*/;#}
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			background-color: white;
+		}
+		input[type=text], textarea:focus {
+			background-color: blue;
+			outline:none;
+			border: 3px solid green;
+			height: 180px;
+		}
+		input[type=submit] {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			cursor: pointer;
+			border: 2px solid red;
+			background-color: white;
+			border-radius: 2px;
+
+		}
+		#submit-text {
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div id= "main-body">
+		<div id = "logo">
+			<div id = "logo-img">
+			<img src="https://dezov.s3.amazonaws.com/media/pixel-heart-png7a0-4e36-9103-99858f8a8f5b.png">
+		</div>
+		<div id = "logo-text">
+			<h1>
+				Crushampton
+			</h1>
+		</div>
+		</div>
+		<div id = "submit-text" >
+			<p>
+				Have a confession?? Like someone but cannot admit it to their face? Then we will post your confession completely anonymously!
+			</p>
+			<p>
+				No hateful or offensive posts will be tolerated :P No names are acceptable of any form.
+			</p>
+		</div>
+		<div id = "submit-form">
+			<form action="submit/" method="post">{% csrf_token %}
+				<textarea name ="submit-form-box" placeholder="Enter your confession..."></textarea>
+				<input id = "submit-form-button" type="submit" value="Submit">
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
