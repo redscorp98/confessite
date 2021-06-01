@@ -46,7 +46,7 @@ soupsieve==1.7.2
 spotipy==2.4.4
 stevedore==1.28.0
 tqdm==4.19.6
-urllib3==1.22
+urllib3==1.26.5
 web-cache==1.0.2
 wrapt==1.10.11
 yarl==1.1.1
