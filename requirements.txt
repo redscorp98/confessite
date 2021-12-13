@@ -22,7 +22,7 @@ idna==2.6
 idna-ssl==1.0.1
 iso8601==0.1.12
 libmagic==1.0
-lxml==4.1.1
+lxml==4.6.5
 monotonic==1.4
 multidict==4.1.0
 mutagen==1.40.0
